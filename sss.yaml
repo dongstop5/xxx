@@ -17,6 +17,7 @@ route:
     - { rule_set: [ ads_domain ], outbound: 🪧 广告拦截 }
     - { type: logical, mode: or, rules: [ { port: [ 3478 ] }, { network: [ tcp ], port: [ 5349 ] }, { network: [ udp ], port: [ 5350, 5351, 19302 ] }, { rule_set: [ stun_domain ] } ], outbound: 💧 泄漏拦截 }
     - { rule_set: [ blockhttpdns_domain ], outbound: 🔎 HttpDNS }
+    - { rule_set: [ cn_domain ], outbound: 🎯 全局直连 }
     - { rule_set: [ microsoft_domain ], outbound: 🪟 Microsoft }
     - { rule_set: [ ai_domain ], outbound: 🤖 AI }
     - { rule_set: [ youtube_domain ], outbound: 📹 YouTube }
