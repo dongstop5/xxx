@@ -57,14 +57,14 @@ outbounds:
   - { tag: 💧 泄漏拦截, type: selector, interrupt_exist_connections: true, outbounds: [ 🚫 拒绝连接, 🎯 全局直连, 🚀 节点选择 ] }
   - { tag: 🔎 HttpDNS, type: selector, interrupt_exist_connections: true, outbounds: [ 🚫 拒绝连接, 🎯 全局直连, 🚀 节点选择 ] }
   - { tag: ♻️ 自动选择, type: urltest, interrupt_exist_connections: true, url: https://www.gstatic.com/generate_204, interval: 3m, tolerance: 150, outbounds: [], filter: [ { action: all, keywords: '' } ] }
-  - { tag: 🍎 Apple, type: selector, interrupt_exist_connections: true, outbounds: [], filter: [ { action: all, keywords: '' } ] }
-  - { tag: 🪟 Microsoft, type: selector, interrupt_exist_connections: true, outbounds: [], filter: [ { action: all, keywords: '' } ] }
-  - { tag: 🔍 Google, type: selector, interrupt_exist_connections: true, outbounds: [], filter: [ { action: all, keywords: '' } ] }
-  - { tag: 📹 YouTube, type: selector, interrupt_exist_connections: true, outbounds: [], filter: [ { action: all, keywords: '' } ] }
-  - { tag: 🤖 AI, type: selector, interrupt_exist_connections: true, outbounds: [], filter: [ { action: all, keywords: '' } ] }
-  - { tag: 🎵 TikTok, type: selector, interrupt_exist_connections: true, outbounds: [], filter: [ { action: all, keywords: '' } ] }
-  - { tag: 🎥 Netflix, type: selector, interrupt_exist_connections: true, outbounds: [], filter: [ { action: all, keywords: '' } ] }
-  - { tag: 📲 Telegram, type: selector, interrupt_exist_connections: true, outbounds: [], filter: [ { action: all, keywords: '' } ] }
+  - { tag: 🍎 Apple, type: selector, interrupt_exist_connections: true, outbounds: [ 🟢 手动选择, ♻️ 自动选择 ], filter: [ { action: all, keywords: '' } ] }
+  - { tag: 🪟 Microsoft, type: selector, interrupt_exist_connections: true, outbounds: [ 🟢 手动选择, ♻️ 自动选择 ], filter: [ { action: all, keywords: '' } ] }
+  - { tag: 🔍 Google, type: selector, interrupt_exist_connections: true, outbounds: [ 🟢 手动选择, ♻️ 自动选择 ], filter: [ { action: all, keywords: '' } ] }
+  - { tag: 📹 YouTube, type: selector, interrupt_exist_connections: true, outbounds: [ 🟢 手动选择, ♻️ 自动选择 ], filter: [ { action: all, keywords: '' } ] }
+  - { tag: 🤖 AI, type: selector, interrupt_exist_connections: true, outbounds: [ 🟢 手动选择, ♻️ 自动选择 ], filter: [ { action: all, keywords: '' } ] }
+  - { tag: 🎵 TikTok, type: selector, interrupt_exist_connections: true, outbounds: [ 🟢 手动选择, ♻️ 自动选择 ], filter: [ { action: all, keywords: '' } ] }
+  - { tag: 🎥 Netflix, type: selector, interrupt_exist_connections: true, outbounds: [ 🟢 手动选择, ♻️ 自动选择 ], filter: [ { action: all, keywords: '' } ] }
+  - { tag: 📲 Telegram, type: selector, interrupt_exist_connections: true, outbounds: [ 🟢 手动选择, ♻️ 自动选择 ], filter: [ { action: all, keywords: '' } ] }
   ############ 全国家分组自动选择 ############
   - { tag: 🇺🇸 美国自动, type: urltest, interrupt_exist_connections: true, url: https://www.gstatic.com/generate_204, interval: 3m, tolerance: 150, outbounds: [], filter: [ { action: include, keywords: "(?i)(?:🇺🇸|(?:^|[\\s_-])(US)(?:(?=$|[\\s_-])|(?:[-_0-9]+(?=$|[\\s_-])))|(?:^|[\\s_-])[-_0-9]*US(?=$|[\\s_-])|美国|United States|(?:(?:^|[\\s_-])CT(?=$|[\\s_-]))|UnitedStates)" } ] }
   
