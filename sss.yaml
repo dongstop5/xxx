@@ -33,7 +33,7 @@ route:
   rule_set:
     # MetaCubeX 规则集
     - { tag: ads_domain, type: remote, format: binary, url: https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ads-all.srs, download_detour: 🎯 全局直连 }
-    - { tag: x_domain, type: remote, format: binary, url: https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/x.srs, download_detour: 🎯 全局直连 }
+    - { tag: x_domain, type: remote, format: binary, url: https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@sing/geo-lite/geosite/twitter.srs, download_detour: 🎯 全局直连 }
     - { tag: instagram_domain, type: remote, format: binary, url: https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/instagram.srs, download_detour: 🎯 全局直连 }
     - { tag: ai_domain, type: remote, format: binary, url: https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ai-!cn.srs, download_detour: 🎯 全局直连 }
     - { tag: youtube_domain, type: remote, format: binary, url: https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@sing/geo-lite/geosite/youtube.srs, download_detour: 🎯 全局直连 }
