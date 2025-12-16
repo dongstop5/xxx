@@ -45,7 +45,7 @@ route:
     - { tag: netflix_ip, type: remote, format: binary, url: https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@sing/geo-lite/geoip/netflix.srs, download_detour: 🎯 全球直连 }
     - { tag: apple_ip, type: remote, format: binary, url: https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@sing/geo-lite/geoip/apple.srs, download_detour: 🎯 全球直连 }
     - { tag: cn_domain, type: remote, url: https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/cn.srs, format: binary, download_detour: 🎯 全球直连 }
-    - { tag: cn_ip, type: remote, format: binary, url: https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/cn.srs, download_detour: 🎯 全球直连 }
+    - { tag: cn_ip, type: remote, format: binary, url: https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/cn.srs, download_detour: 🎯 全球直连 }
     # senshinya 规则集
     - { tag: stun_domain, type: remote, url: https://jsd.onmicrosoft.cn/gh/senshinya/singbox_ruleset@main/rule/STUN/STUN.srs, format: binary, download_detour: 🎯 全球直连 }
     - { tag: blockhttpdns_domain, type: remote, url: https://jsd.onmicrosoft.cn/gh/senshinya/singbox_ruleset@main/rule/BlockHttpDNS/BlockHttpDNS.srs, format: binary, download_detour: 🎯 全球直连 }
@@ -65,6 +65,4 @@ outbounds:
   - { tag: 🪧 广告拦截, type: selector, interrupt_exist_connections: true, outbounds: [ 🚫 拒绝连接, 🎯 全局直连, 🚀 节点选择 ] }
   - { tag: 💧 泄漏拦截, type: selector, interrupt_exist_connections: true, outbounds: [ 🚫 拒绝连接, 🎯 全局直连, 🚀 节点选择 ] }
   - { tag: 🔎 HttpDNS, type: selector, interrupt_exist_connections: true, outbounds: [ 🚫 拒绝连接, 🎯 全局直连, 🚀 节点选择 ] }
-  ############ 全国家分组自动选择 ############
-  - { tag: 🇺🇸 美国自动, type: urltest, interrupt_exist_connections: true, url: https://www.gstatic.com/generate_204, interval: 3m, tolerance: 150, outbounds: [], filter: [ { action: include, keywords: "(?i)(?:🇺🇸|(?:^|[\\s_-])(US)(?:(?=$|[\\s_-])|(?:[-_0-9]+(?=$|[\\s_-])))|(?:^|[\\s_-])[-_0-9]*US(?=$|[\\s_-])|美国|United States|(?:(?:^|[\\s_-])CT(?=$|[\\s_-]))|UnitedStates)" } ] }
-  
+  ############ 全国家分组自动选择 ############  
