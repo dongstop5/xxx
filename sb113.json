@@ -196,8 +196,8 @@
             "tag": "Ad-block",
             "type": "selector",
             "outbounds": [
-                "DIRECT",
                 "BLOCK",
+                "DIRECT",
                 "Proxy"
             ]
         },
@@ -380,12 +380,12 @@
                 "outbound": "DIRECT"
             },
             {
-                "clash_mode": "Global",
-                "outbound": "Proxy"
-            },
-            {
                 "clash_mode": "Direct",
                 "outbound": "DIRECT"
+            },
+            {
+                "clash_mode": "Global",
+                "outbound": "Proxy"
             },
             {
                 "rule_set": "geosite-category-ads-all",
@@ -497,7 +497,10 @@
                 "outbound": "Streaming"
             },
             {
-                "rule_set": "geosite-cn",
+                "rule_set": [
+                    "geosite-cn",
+                    "geoip-cn"
+                ],
                 "outbound": "China"
             },
             {
