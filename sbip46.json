@@ -212,6 +212,15 @@
             ]
         },
         {
+            "tag": "Telegram",
+            "type": "selector",
+            "outbounds": [
+                "Proxy",
+                "Auto",
+                "{all}"
+            ]
+        },
+        {
             "tag": "OpenAI",
             "type": "selector",
             "outbounds": [
@@ -239,15 +248,6 @@
         },
         {
             "tag": "Google",
-            "type": "selector",
-            "outbounds": [
-                "Proxy",
-                "Auto",
-                "{all}"
-            ]
-        },
-        {
-            "tag": "Telegram",
             "type": "selector",
             "outbounds": [
                 "Proxy",
